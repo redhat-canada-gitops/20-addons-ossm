@@ -6,7 +6,3 @@ namespace: argocd
 bases:
 - ../../../applications/base
 - ../../../projects/base
-
-resources:
-- namespace.yaml
-- operator-group.yaml
