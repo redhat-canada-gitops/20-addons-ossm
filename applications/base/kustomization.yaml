@@ -3,6 +3,6 @@ kind: Kustomization
 
 resources:
 - elasticsearch-operator.yaml
-- kustomization.yaml
 - jaeger-operator.yaml
+- kiali-operator.yaml
 - ossm-operator.yaml
