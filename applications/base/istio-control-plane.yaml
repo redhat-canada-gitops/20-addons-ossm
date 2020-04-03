@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: istio-control-plane
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: ossm
+  source:
+    path: manifests/istio-control-plane/base
+    repoURL: https://github.com/redhat-canada-gitops/20-addons-ossm.git
+    targetRevision: master
+  syncPolicy:
+    manual:
+      prune: false
+      selfHeal: false
+  sync:
+    comparedTo:
+      destination:
+        namespace: argocd
+        server: https://kubernetes.default.svc
+      source:
+        path: manifests/istio-control-plane/base
+        repoURL: https://github.com/redhat-canada-gitops/20-addons-ossm.git
+        targetRevision: master
