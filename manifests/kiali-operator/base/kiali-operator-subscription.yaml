@@ -1,11 +1,12 @@
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
-  name: kiali-ossm-operator
+  name: kiali-ossm
   namespace: istio-system
 spec:
   channel: stable
   installPlanApproval: Automatic
-  name: kiali-ossm-operator
+  name: kiali-ossm
   source: redhat-operators
   sourceNamespace: openshift-marketplace
+  startingCSV: kiali-operator.v1.0.12
