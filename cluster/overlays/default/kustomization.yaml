@@ -9,3 +9,4 @@ bases:
 
 resources:
 - namespace.yaml
+- operator-group.yaml
