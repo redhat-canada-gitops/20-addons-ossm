@@ -7,3 +7,4 @@ resources:
 - jaeger-operator.yaml
 - kiali-operator.yaml
 - ossm-operator.yaml
+- istio-control-plane.yaml
